@@ -31,15 +31,18 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray = (heapElem *) realloc (pq->heapArray,i*sizeof(heapElem));
    }
 
-   for(i = 0; i<pq->capac; i++){
+  /* for(i = 0; i<pq->capac; i++){
       if(pq->heapArray[i].data == NULL){
          pq->heapArray[i].priority = priority;
          pq->heapArray[i].data = data;
          break;
       }
-   }
+   }*/
 
-   i=0;
+   pq->heapArray[pq->size+1].data = data;
+   pq->heapArray[pq->size+1].priority = priority;
+
+   i= pq->size + 1;
    heapElem  aux;
 
    while(pq->heapArray[i].priority > pq->heapArray[(i-1)/2].priority){
