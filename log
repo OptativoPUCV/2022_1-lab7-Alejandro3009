@@ -42,3 +42,9 @@ heap.c:35:36: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 40b9a73
+ju.,  5 de may. de 2022 13:08:41: 
+ heap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+ tests:  2|2
+total_score: 20/70
+9fb544a
