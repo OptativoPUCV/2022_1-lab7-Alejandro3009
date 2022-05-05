@@ -31,3 +31,14 @@ ju.,  5 de may. de 2022 12:40:05:
  tests:  2|2
 total_score: 20/70
 464421d
+ju.,  5 de may. de 2022 13:04:54: 
+ heap.c | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function 'heap_push':
+heap.c:35:36: error: comparison between pointer and integer [-Werror]
+       if(pq->heapArray[i].priority == NULL){
+                                    ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+40b9a73
