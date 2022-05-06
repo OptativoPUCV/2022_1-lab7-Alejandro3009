@@ -60,16 +60,15 @@ void heap_pop(Heap* pq){
          aux = pq->heapArray[(i*2)+1];
          pq->heapArray[(i*2)+1] = pq->heapArray[i];
          pq->heapArray[i] = aux;
-         i = (i*2)+1;
       }
 
       if (pq->heapArray[(i*2)+2].priority > pq->heapArray[i].priority){
          aux = pq->heapArray[(i*2)+2];
          pq->heapArray[(i*2)+2] = pq->heapArray[i];
          pq->heapArray[i] = aux;
-         i = (i*2)+2;
       }
-      
+
+      i++;
       if(i == pq->size || i == pq->capac)break;
    }
 }
