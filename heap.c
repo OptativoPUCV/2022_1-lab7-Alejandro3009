@@ -71,6 +71,7 @@ void heap_pop(Heap* pq){
       i++;
       if(i == pq->size || i == pq->capac)break;
    }
+   pq->size--;
 }
 
 Heap* createHeap(){
